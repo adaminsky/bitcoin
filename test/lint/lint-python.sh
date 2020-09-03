@@ -101,7 +101,7 @@ if ! PYTHONWARNINGS="ignore" flake8 --ignore=B,C,E,F,I,N,W --select=$(IFS=","; e
     EXIT_CODE=1
 fi
 
-if ! mypy --ignore-missing-imports $(git ls-files "test/functional/*.py"); then
+if ! mypy --ignore-missing-imports test/functional; then
     EXIT_CODE=1
 fi
 
